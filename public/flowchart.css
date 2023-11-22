@@ -20,7 +20,7 @@ body {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-rows: 0.2fr 0.2fr 1.5fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr;
     grid-template-columns: 1.5fr 0.75fr;
     grid-template-areas:
         'navbar1 navbar1'
@@ -75,8 +75,8 @@ header {
     width: 45%;
     text-align: center;
     font-size: 1vw;
-}
 
+}
 
 .content {
     display: flex;
@@ -113,13 +113,30 @@ header {
 .Menu {
     display: flex;
     justify-content: right;
+    width: 50%;
 }
 
+#Visualization{
+    color: #DB6F32;
+    
+}
 .Menu a {
+    border:white 1px solid;
+    border-radius: 1000rem;
+    background-color: black;
     color: var(--main-color);
-    padding: 14px 16px;
-
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-right: 40px ;
 }
+#Save{
+    color:var(--text-color);
+    background-color: var(--main-color);
+}
+
+
 
 
 .codeArea {
@@ -133,39 +150,77 @@ header {
     font-size: 1.2vw;
 }
 
-.input {
-    background: #DB6F32;
+.io-container {
     grid-area: input;
-    display: flex;
-    font-size: 1.2vw;
-    justify-content: center;
-}
+    display:flex;
+    column-gap: 10px;
+    text-align: center;
+    font-weight: bold;
 
+}
+.input{
+    width:50%;
+    background-color: #DB6F32;
+    height: 100%;
+}
+.output{
+    width:50%;
+    background-color: #E49263;
+    height: 100%;
+}
 .option {
     font-size: 0.75vw;
-    background: #000;
+    
     grid-area: options;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
-
-.Flowchart {
+.flowchart-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flowchart {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: black;
     margin: 0;
     width: 50%;
     height: 25%;
-    border-radius: 32px;
+    border-radius: 1000px;
     background: #79FFA6;
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
-
-.Pseduocode {
-    margin: 0;
+.Pseduocode-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.picture img{
     width: 50%;
+}
+.picture{
+    text-align: center;
+    
+}
+.Pseduocode {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
+    margin: 0;
     height: 25%;
     flex-shrink: 0;
     border-radius: 32px;
@@ -176,8 +231,11 @@ header {
 }
 
 .Our {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    padding-left: 0.25%;
+    padding-right: 0.25%;
     margin: 0;
-    width: 50%;
     height: 25%;
     flex-shrink: 0;
     border-radius: 32px;

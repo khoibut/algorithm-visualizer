@@ -10,7 +10,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet">
     <!-- style -->
-    <link rel="stylesheet" href="visualizer.css">
+    <link rel="stylesheet" href="flowchart.css">
 </head>
 <body>
 
@@ -23,7 +23,8 @@
         
 
         <div class="content">
-            <a> C++ Compiler and Playground </a>
+            <a> C++ Compiler and Playground 
+            <i class='bx bxs-chevron-down'></i> </a>
         </div>
         <div class="Signin">
             <div class="Login">
@@ -38,12 +39,15 @@
 
         <div class="navbar2Container">
         <div class="Visualizer">
-            <a>My Visualization</a>
+            <i class='bx bx-x'></i>
+            <a>My Visualization</a> 
+            <i class='bx bx-pencil'; style="margin-left: 5px;" ></i>
         </div >
         <div class="Menu">
-        <i><a>My Visualization</a></i>
-        <i><a>Save</a></i>
-        <i><a>Run</a></i>
+        <a id="Visualization">My Visualization</a>
+        <a id="Save">Save</a>
+
+        <a>Run</a>
         </div>
         
 
@@ -62,15 +66,25 @@
        
         </div> </div>
 
-        <div class="input">
-            <h1>Input</h1>
+        <div class="io-container">
+            <div class="input">Input</div>
+            <div class="output">Output</div>
         </div>
 
         <div class="option">
-           <h1 class="Flowchart"><a>Flowchart <br></a></h1>
-           <h1 class="Pseduocode"><a>Pseudo code <br></a></h1>
-            <h1 class="Our"><a>Our Visualizer <br></a></h1>
+            <div class="flowchart-container" style="background-color: black; width: 100%;"><a class="flowchart">Flowchart</a></div>
+             
+            <div class="picture"; style="background-color: aqua;">
+                <img src="Flowchart.png">
 
+
+            </div>
+        
+        
+            <div class="Pseduocode-container">
+             <h1 class="Pseduocode"><a>Pseudo code <br></a></h1>
+            <h1 class="Our"><a>Our Visualizer <br></a></h1>
+        </div>
         </div>
     </div>
 
