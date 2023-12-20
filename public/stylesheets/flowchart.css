@@ -1,0 +1,174 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Jacques+Francois&family=JetBrains+Mono&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+.cm-editor.cm-focused{
+    outline:none;
+}
+:root {
+    --main-color: #79FFA6;
+    --text-color: #000;
+}
+
+.container {
+    background-color: #000;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 1fr 0.1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'navbar1 navbar1'
+        'navbar2 navbar2'
+        'code options1'
+        'code flow'
+        'code options2';
+    column-gap: 10px;
+}
+
+.navbar1Container {
+    background: #16212D;
+    grid-area: navbar1;
+}
+
+header {
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    padding-left: 1%;
+    display: flex;
+    width: 15%;
+}
+
+.navbar a {
+    color: var(--main-color);
+    font-size: 1.2vw;
+}
+
+.Signin {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.Signin a {
+    color: var(--main-color);
+    padding: 14px 16px;
+
+}
+
+.Login,
+.Register {
+    background-color: #000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: white 1px solid;
+    border-radius: 100rem;
+    width: 45%;
+    text-align: center;
+    font-size: 1vw;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.content a {
+    color: var(--main-color);
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Section 2 */
+.navbar2Container {
+    background: #223243;
+    grid-area: navbar2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2vw;
+}
+
+.Visualizer {
+    padding-left: 1%;
+    display: flex;
+    justify-content: left;
+}
+
+.Visualizer a {
+    color: var(--main-color);
+}
+
+.Menu {
+    display: flex;
+    justify-content: right;
+}
+
+.Menu a {
+    color: var(--main-color);
+    padding: 14px 16px;
+    cursor:pointer;
+
+}
+.codeArea {
+    background: #282c34;
+    grid-area: code;
+    overflow-y: auto;
+}
+.currentOption{
+    grid-area: options1;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.flowchart{
+    text-align: center;
+    overflow: auto;
+    grid-area:flow;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.option{
+    font-weight: bold;
+    font-size: 1.5vw;
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 1000rem;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color:var(--text-color);
+
+}
+.options{
+    grid-area:options2;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pseudocode{
+    background-color: white;
+    padding:5%;
+     white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    overflow-y: auto;
+}

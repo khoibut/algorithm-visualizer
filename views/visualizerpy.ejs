@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link href="/stylesheets/Normalize.css" rel="stylesheet">
+    <link href="/stylesheets/visualizer.css" rel="stylesheet">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- style -->
+    <script src="javascripts/submit.js" defer type="module"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar1Container">
+            <!-- Header -->
+            <header>
+                <div class="navbar">
+                    <a>Home</a>
+                </div>
+
+
+                <div class="content">
+                    <a> Python Compiler and Playground</a>
+                </div>
+                <div class="Signin">
+                    <div class="Login">
+                        <a> Login </a>
+                    </div>
+
+                    <div class="Register">
+                        <a> Register </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+
+        <div class="navbar2Container">
+            <div class="Visualizer">
+                <a>My Visualization</a>
+            </div>
+            <div class="Menu">
+                <i><a>My Visualization</a></i>
+                <i><a>Save</a></i>
+                <i><a>Run</a></i>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+        
+        <textarea data-saved hidden value=<%=code%>>
+            </textarea>
+        <div class="codeArea">
+            <script src="javascripts/editorpy.bundle.js" defer></script>
+            <form hidden method="post" action="/flowchartprocpy" data-flow>
+                <textarea name="code" required></textarea>
+                <input type="text" name="input">
+            </form>
+            <form hidden method="post" action="/pseudoprocpy" data-pseudo>
+                <textarea name="code" required></textarea>
+                <input type="text" name="input">
+            </form>
+        </div>
+        <div class="input">
+            <h1>Errors found</h1>
+            <pre>
+<%=error%>
+            </pre>
+        </div>
+
+        <div class="option">
+            <h1 class="Flowchart" data-runflow><a>Flowchart <br></a></h1>
+            <h1 class="Pseduocode" data-runpseudo><a>Pseudo code <br></a></h1>
+            <h1 class="Our"><a>Our Visualizer <br></a></h1>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+</body>
+
+</html>

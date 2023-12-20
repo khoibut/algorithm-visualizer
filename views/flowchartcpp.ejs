@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link href="/stylesheets/Normalize.css" rel="stylesheet">
+    <link href="/stylesheets/flowchart.css" rel="stylesheet">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- style -->
+    <script src="javascripts/submit.js" defer type="module"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar1Container">
+            <!-- Header -->
+            <header>
+                <div class="navbar">
+                    <a>Home</a>
+                </div>
+
+
+                <div class="content">
+                    <a> C++ Compiler and Playground </a>
+                </div>
+                <div class="Signin">
+                    <div class="Login">
+                        <a> Login </a>
+                    </div>
+
+                    <div class="Register">
+                        <a> Register </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+
+
+        <div class="navbar2Container">
+            <div class="Visualizer">
+                <a>My Visualization</a>
+            </div>
+            <div class="Menu">
+                <i><a>My Visualization</a></i>
+                <i><a>Save</a></i>
+                <i><a>Run</a></i>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="codeArea">
+            <script src="javascripts/editorcpp.bundle.js" defer></script>
+            <form hidden method="post" action="/flowchartproccpp" data-flow>
+                <textarea name="code" required></textarea>
+                <input type="text" name="input">
+            </form>
+            <form hidden method="post" action="/pseudoproccpp" data-pseudo>
+                <textarea name="code" required></textarea>
+                <input type="text" name="input">
+            </form>
+        </div>
+        <div class="currentOption">
+            <div class="option" data-runflow>Flowchart</div>
+        </div>
+        <div class="flowchart">
+            <img src="images/code.png">
+        </div>
+        <div class="options">
+            <div class="option" data-runpseudo>Pseduocode</div>
+            <div class="option">Our tutorial</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
