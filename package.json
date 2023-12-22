@@ -17,8 +17,10 @@
     "debug": "~2.6.9",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "google-auth-library": "^9.4.1",
     "http-errors": "~1.6.3",
+    "mongoose": "^8.0.3",
     "morgan": "~1.9.1",
     "promise": "^8.3.0",
     "rollup": "^4.7.0"

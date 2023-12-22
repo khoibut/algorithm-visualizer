@@ -244,7 +244,9 @@ header {
     line-height: normal;
     letter-spacing: 0.03894rem;
 }
-
+.cpp-visualizer a{
+    color:#16212D
+}
 .cpp-visualizer, .python-visualizer {
     box-sizing: border-box;
     padding-left: 10%;
