@@ -17,7 +17,7 @@ form.onsubmit = function (e) {
         if(res.status==400){
             console.log('nahdog')
             form.querySelector('span').innerHTML="Wrong Email or Password."
-        }else{
+        }else if(res.status==200){
             window.location.replace('/home')
         }
     })

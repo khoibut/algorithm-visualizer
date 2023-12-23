@@ -19,12 +19,12 @@ async function ifCorrect(email,password){
     console.log(user)
     if(user){
         if(user.password==password){
-            return 200
+            return {status:200,name:user.name}
         }else{
-            return 400
+            return {status:400}
         }
     }else{
-        return 400
+        return {status:400}
     }
 }
 module.exports={ifExist,ifCorrect}
