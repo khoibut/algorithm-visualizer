@@ -172,3 +172,6 @@ header {
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
     overflow-y: auto;
 }
+a{
+    text-decoration: none;
+}

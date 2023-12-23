@@ -1,3 +1,6 @@
-a=0;
-print(a)
-print("hello world")
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  cout<<"hello world";
+}
