@@ -25700,29 +25700,51 @@
    const oneDark = [oneDarkTheme, /*@__PURE__*/syntaxHighlighting(oneDarkHighlightStyle)];
 
    let editor = new EditorView({
-     doc:sessionStorage.getItem('codecpp'),
-     extensions: [basicSetup, cpp(),oneDark,EditorView.lineWrapping,keymap.of([indentWithTab])],
+     doc: sessionStorage.getItem('codecpp'),
+     extensions: [basicSetup, cpp(), oneDark, EditorView.lineWrapping, keymap.of([indentWithTab])],
      parent: document.querySelector('.codeArea'),
    });
-   let flowchartButton=document.querySelector('[data-runflow]');
-   flowchartButton.addEventListener("click",function(){
-     let codeForm=document.querySelector('[data-flow]');
-     let code=codeForm.querySelector('textarea[name="code"]');
-     code.innerHTML=getCurrentCode();
+   let flowchartButton = document.querySelector('[data-runflow]');
+   flowchartButton.addEventListener("click", function () {
+     let codeForm = document.querySelector('[data-flow]');
+     let code = codeForm.querySelector('textarea[name="code"]');
+     code.innerHTML = getCurrentCode();
      codeForm.submit();
    });
-   let pseudoButton=document.querySelector('[data-runpseudo]');
-   pseudoButton.addEventListener('click',function(){
-     let codeForm=document.querySelector('[data-pseudo]');
-     let code=codeForm.querySelector('textarea[name="code"]');
-     code.innerHTML=getCurrentCode();
+   let pseudoButton = document.querySelector('[data-runpseudo]');
+   pseudoButton.addEventListener('click', function () {
+     let codeForm = document.querySelector('[data-pseudo]');
+     let code = codeForm.querySelector('textarea[name="code"]');
+     code.innerHTML = getCurrentCode();
      codeForm.submit();
    });
-   function getCurrentCode(){
+   function getCurrentCode() {
      return editor.state.doc.toString();
    }
-   window.addEventListener('beforeunload',function(){
-     sessionStorage.setItem('codecpp',getCurrentCode());
+   let submitButton = document.querySelector('[data-save]');
+   submitButton.addEventListener('click', function () {
+     let user = document.querySelector('[data-user]');
+     let name=document.querySelector('[data-name]').innerHTML;
+     console.log(user);
+     if (!user) {
+       window.location.replace('/createaccount');
+     } else {
+       fetch("/savecode", {
+         method: "POST",
+         body: JSON.stringify({
+           code:getCurrentCode(),
+           user:user.value,
+           name:name,
+           lang:'cpp'
+         }),
+         headers: {
+           "Content-type": "application/json; charset=UTF-8"
+         }
+       }); 
+     }
+   });
+   window.addEventListener('beforeunload', function () {
+     sessionStorage.setItem('codecpp', getCurrentCode());
    });
 
 })();

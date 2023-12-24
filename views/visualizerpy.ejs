@@ -28,26 +28,20 @@
                     <a> Python Compiler and Playground</a>
                 </div>
                 <div class="Signin">
-                    <div class="Login">
-                        <a> Login </a>
-                    </div>
-
-                    <div class="Register">
-                        <a> Register </a>
-                    </div>
+                    <%-loggedin%>
                 </div>
             </header>
         </div>
 
 
 
-        <div class="navbar2Container">
+        <div class="navbar2Container">  
             <div class="Visualizer">
                 <a>My Visualization</a>
             </div>
             <div class="Menu">
-                <i><a>My Visualization</a></i>
-                <i><a>Save</a></i>
+                <i><a data-name contenteditable="true">My Visualization</a></i>
+                <i><a data-save>Save</a></i>
                 <i><a>Run</a></i>
             </div>
 
