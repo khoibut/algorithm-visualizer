@@ -1,0 +1,8 @@
+sub2=>subroutine: print('hello world')
+op4=>operation: a = 12
+op6=>operation: b = 13
+sub8=>subroutine: print((a + b))
+
+sub2->op4
+op4->op6
+op6->sub8

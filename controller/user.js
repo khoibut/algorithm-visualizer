@@ -35,12 +35,12 @@ async function ifCorrect(email, password) {
     }
 }
 async function addCode(code, user, name,lang) {
-    await codeModel.create({
-        code: code,
+
+    await codeModel.findOneAndUpdate({
         name: name,
         lang:lang,
         belong: user
-    })
+    },{code:code},{upsert:true,news:true})
     return 200
 }
-module.exports = { ifExist, ifCorrect, addCode }
+module.exports = { ifExist, ifCorrect, addCode,codeModel }

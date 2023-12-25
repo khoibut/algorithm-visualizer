@@ -7,7 +7,7 @@ const path = require('path');
 const { pseudofy } = require('../controller/pseudo.js')
 const sessions = require('express-session')
 const oneDay = 1000 * 60 * 60 * 24;
-const { ifCorrect, ifExist,addCode } = require('../controller/user.js')
+const { ifCorrect, ifExist,addCode,codeModel } = require('../controller/user.js');
 router.use(sessions({
   secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
   saveUninitialized: true,
@@ -92,6 +92,9 @@ router.post('/pseudoproccpp', (req, res) => {
     code = req.body.code
     res.redirect('/visualizercpp')
   })
+})
+router.get('/sendcodecpp', async (req, res) => {
+  res.send({codecpp:await codeModel.find({belong:req.session.user,lang:'cpp'})})
 })
 router.post('/flowchartproccpp', (req, res) => {
   compile(req.body.code, 'cpp').then((message) => {
@@ -182,6 +185,23 @@ router.post('/login', (req, res) => {
 router.post('/savecode',(req,res)=>{
   addCode(req.body.code,req.body.user,req.body.name,req.body.lang).then(message=>{
     res.send(message)
+  })
+})
+router.get('/myvisualizations',async (req,res)=>{
+  if(req.session.user){
+    codecpp=await codeModel.find({belong:req.session.user,lang:'cpp'})
+    codepy=await codeModel.find({belong:req.session.user,lang:'python'})
+    console.log(codepy)
+    res.render('myvisualizations.ejs',{loggedin:req.session.user+'<input data-user hidden value='+req.session.user+'>',codecpp:codecpp,codepy:codepy})
+  }
+  else{
+    res.redirect('/createaccount')
+  }
+})
+router.delete('/deletecodecpp',async (req,res)=>{
+  search=req.body
+  codeModel.findOneAndDelete(search).then(()=>{
+    res.send(200)
   })
 })
 module.exports = router;
