@@ -20,15 +20,13 @@ body {
 .container {
     background-color: #000;
     display: grid;
-    height: 100%;
     width: 100%;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.5fr;
     grid-template-columns: 1.5fr 0.75fr;
     grid-template-areas:
         'navbar1 navbar1'
         'navbar2 navbar2'
-        'code input '
-        'code options';
+        'code input ';
     column-gap: 20px;
 }
 
@@ -39,7 +37,7 @@ body {
 }
 
 header {
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,7 +51,7 @@ header {
 
 .navbar a {
     color: var(--main-color);
-    font-size: 1.2vw;
+    font-size: 1rem;
 }
 
 .Signin {
@@ -70,6 +68,9 @@ header {
 
 .Login,
 .Register {
+    display: flex;
+    text-align: center;
+    justify-content: center;
     background-color: #000;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -100,8 +101,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 1.2vw;
-    
+    font-size: 1.2rem;
+
 }
 
 .Visualizer {
@@ -115,205 +116,172 @@ header {
 }
 
 /* Tutorial */
-.Tutorial{
+.Tutorial {
     background-color: #6EAEF9;
     margin-left: 3%;
-    margin-top: 2%; 
+    margin-top: 2%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
 }
 
-.Tutorial a{
-    color:#000;
+.Tutorial a {
     display: flex;
     align-items: center;
     text-align: justify;
-    font-size: 1.5rem;
-    margin-left: 2%;
-    margin-top: 2%;
-}
-#SecondSetence{
-    margin-top: 5%;
 }
 
-.Tutorial button{
-    margin-top: 3%;
-    margin-left: 1%;
-    margin-bottom: 1%;
-    margin-right: 1%;
+
+button {
+    box-sizing: content-box;
     background-color: #000;
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 0.00005%;
-    padding-right: 0.00005%;
+    padding-left: 3%;
+    padding-right: 3%;
     border: white 1px solid;
     border-radius: 100rem;
-    width: 15%;
-    height: 10%;
     text-align: center;
-    font-size: 0.75vh;
+    font-size: 1.5rem;
     color: #DB6F32;
     box-shadow: 5px 5px 10px #000;
     cursor: pointer;
 }
 
 /* View our tutorial */
-.WorkContainer{
-    background-color: #DB6F32;
-    margin-top: 4%;
+.WorkContainer {
     margin-right: 4%;
-    
-}
-.WorkContainer h3{
+    margin-top: 4%;
+    padding-top: 10%;
+    background-color: #DB6F32;
     text-align: center;
-    font-weight: 100rem;
-    
-    font-size: 3rem;
+    font-weight: 600;
+    font-size: 2.5rem;
 
 }
-.ButtonContainer{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
 
-.C button{
-     
-    background-color: #000;
-    padding-top: 25%;
-    padding-bottom: 25%;
-    padding-left: 100%;
-    padding-right: 100%;
-    border: white 1px solid;
-    border-radius: 100rem;
-    width: 100%;
-    height:100%;
-    text-align: center;
-    font-size: 1vw;
+.OurTutorial {
     display: flex;
     justify-content: center;
-    color: #79FFA6;
-    margin-top: 30%;
-    margin-bottom: 50%;
-    align-items: center; 
-    box-shadow: 5px 5px 10px #000;
-    cursor: pointer;
 }
 
+.ButtonContainer {
+    margin-top: 5%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 
-.InputTutorial{
-    background-color: #223243 ;
-    margin-top: 1%;
+.ButtonContainer button {
+    width: 20%;
+}
+
+.view-tutorial {
+    margin-top: 2%;
+    position: relative;
     margin-left: 2%;
     margin-right: 2%;
-    width: 148%;
-    max-height: 150%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.Input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
-    width: 90%;
-    height: 90%;
-    flex-shrink: 0;
-    border-radius: 160px;
-    opacity: 0.65;
-    background: #657687;
-    box-shadow: 0 40px 200px #657687;
-    filter: blur(30px);
-    cursor: pointer;
-}
-
-.InputTutorial h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #223243;
+    padding-top: 3%;
+    padding-bottom: 3%;
     text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 96%;
+    color: #000;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 4rem;
+}
+
+.text {
+    color: black;
     position: absolute;
-    z-index: 1;
-    cursor: pointer;
 }
 
-/* Workspace */
-.Workspace1{
-    height: 95vh;
-    background-image: url(Rectangle\ 21.png);
-    object-fit: cover;
-   
+.blur {
+    overflow-y: hidden;
+    overflow: hidden;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8.625rem;
+    opacity: 0.65;
+    background: #395A7C;
+    color: #395A7C;
+    mix-blend-mode: color-dodge;
+    filter: blur(23.450000762939453px);
 }
 
-.Workspace1 h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    margin-bottom: 50%;
+.workspace{
+    padding-top: 2%;
+    margin-top: 2%;
+    background-color: #2C3B52;
+}
+
+.workspace .header {
     color: #DB6F32;
-    padding-top: 3rem;
-}
-
-.Workspace2{
-    height: 95vh;
-    background-image: url(Rectangle\ 35.png);
-    object-fit: cover;
-}
-
-.Workspace2 h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    font-family: 'Inter';
     font-size: 3rem;
-    margin-bottom: 50%;
-    color: #DB6F32;
-    padding-top: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
 }
 
-/* Footer */
-.footerContainer{
-width: 100%;
-height: 100px;
-border-radius: 30px 30px 0px 0px;
-border: 2px solid #000;
-background: #1A5E5E;
-background-image: url(./images/Mask\ group.png);
-background-repeat: no-repeat;
-background-size: 5rem;
-}
-
-.social{
+.workspace .code-container {
+    padding-right: 2%;
+    overflow: auto;
+    padding-left: 2%;
     display: flex;
-    flex-direction: row-reverse; 
-    margin-right: 1rem;
-    margin-top: 1%;
+    gap: 30px;
 }
 
-.social a .bx {
-    margin-left: 5rem;
-    font-size: 50px;
-    color: #fff;
-    padding: 10px;
-    border-radius: 100px;
-    background: #1A5E5E;  
+.code {
+    flex-shrink: 0;
+    padding-bottom: 3%;
+    border-radius: 1.5rem;
+    padding-top: 5%;
+    background-color: #67D88D;
+    width: 17%;
 }
 
-.social a .bx:hover {
-    background: var(--main-color);
-    box-shadow: 0 0 20px orange;
+.code .id {
+    text-align: center;
+    font-size: 7rem;
 }
-
-/* Custom scroll Bar */
-html::-webkit-scrollbar{
-    width: 0.5rem;
+.worspace .python{
+    background-color: black;
 }
-html::-webkit-scrollbar-track{
-  background: transparent;
+.options-container {
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
 }
-html::-webkit-scrollbar-thumb{
-    background: #DB6F32;
-    border-radius: 5rem;
+.options{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width:70%;
+}
+.code-name{
+    text-align: center;
+    font-size: 2rem;
+}
+.workspace.python{
+    background-color: rgb(49, 48, 48);
 }
