@@ -55,11 +55,14 @@ header {
 }
 
 .Signin {
+    color: var(--main-color);
     display: flex;
     justify-content: space-around;
     width: 15%;
 }
-
+a{
+    text-decoration: none;
+}
 .Signin a {
     color: var(--main-color);
     padding: 14px 16px;
@@ -117,12 +120,16 @@ header {
 
 /* Tutorial */
 .Tutorial {
-    background-color: #6EAEF9;
+    background: url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    -webkit-text-stroke: #000 1px;
     margin-left: 3%;
     margin-top: 2%;
     padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 2%;
     color: #FFF;
     font-family: 'Inter';
     font-size: 1.5rem;
@@ -156,6 +163,12 @@ button {
 
 /* View our tutorial */
 .WorkContainer {
+    -webkit-text-stroke: #000 1px;
+    color: white;
+    background:url('../images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin-right: 4%;
     margin-top: 4%;
     padding-top: 10%;
@@ -229,6 +242,7 @@ button {
     padding-top: 2%;
     margin-top: 2%;
     background-color: #2C3B52;
+    padding-bottom: 2%;
 }
 
 .workspace .header {
@@ -284,4 +298,40 @@ button {
 }
 .workspace.python{
     background-color: rgb(49, 48, 48);
+}
+.paragraph {
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+.footer {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background: #1A5E5E;
+    border-radius: 1.875rem 1.875rem 0rem 0rem;
+}
+
+.credit,
+.socialMedia {
+    display: flex;
+    justify-content: space-around;
+}
+
+#uit {
+    width: 30%;
+    aspect-ratio: 114/90;
+}
+
+.credit img {
+    width: 25%;
+    height: auto;
+}
+section{
+    background-color: white;
+}
+.socialMedia img {
+    width: 20%;
 }

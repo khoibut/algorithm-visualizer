@@ -303,14 +303,11 @@ header {
 }
 
 .heading div {
-    background: #DD03F0;
-    background: -webkit-radial-gradient(circle farthest-corner at center center, #DD03F0 0%, #FFD600 50%, #FF07F5 100%);
-    background: -moz-radial-gradient(circle farthest-corner at center center, #DD03F0 0%, #FFD600 50%, #FF07F5 100%);
-    background: radial-gradient(circle farthest-corner at center center#FFD600 50%, #FF07F5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 3vw;
+    background: linear-gradient(to right, #121FCF 25%, #CF1512 64%);
 
-
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .heading p {

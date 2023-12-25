@@ -23,7 +23,7 @@
 
                 <!-- Navbar1 -->
                 <div class="navbar">
-                    <a>Home</a>
+                    <a href="/home">Home</a>
                 </div>
                 <div class="content">
                     <a> My visualizations
@@ -38,7 +38,7 @@
         <!-- Navbar2 -->
         <div class="navbar2Container">
             <div class="Visualizer">
-                <h3> <em>Hi, (username),</em> </h3>
+                <h3> <em>Hi, <%-loggedin%>,</em> </h3>
             </div>
         </div>
 
@@ -59,7 +59,6 @@
             View all your work here
             <div class="ButtonContainer">
                 <button>C++</button>
-                <button>Python</button>
             </div>
         </div>
     </div>
@@ -105,34 +104,18 @@
         </div>
         <script src="javascripts/myvisualizations.js"></script>
     </div>
-    <div class="workspace python">
-        <div class="header">
-            Your Python Workspace
+    <br>
+    <div class="footer">
+        <div class="credit">
+            <img src="images/logo.png">
+            <img id="uit" src="images/UIT.png">
         </div>
-        <div class="code-container">
-            <div class="code">
-                <div class="id">
-                    1
-                </div>
-                <div class="code-name">
-                    Prime
-                </div>
-                <div class="options-container">
-                    <button class="options">
-                        Flowchart
-                    </button>
-                    <button class="options">
-                        Pseudo code
-                    </button>
-                    <button class="options">
-                        Edit
-                    </button>
-                    <button class="options">
-                        Delete
-                    </button>
-                </div>
-            </div>
+        <div class="socialMedia">
+            <img src="images/facebook.png">
+            <img src="images/gmail.png">
+            <img src="images/git.png">
         </div>
+    </div>
 </body>
 
 </html>

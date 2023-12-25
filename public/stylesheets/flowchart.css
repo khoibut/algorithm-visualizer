@@ -57,6 +57,7 @@ header {
 }
 
 .Signin {
+    color:var(--main-color);
     display: flex;
     justify-content: space-around;
     width: 15%;

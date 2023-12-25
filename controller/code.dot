@@ -2,8 +2,10 @@ digraph {
 graph [splines=polyline];
 D0 [shape=box, style=rounded, label="begin"];
 {rank = sink; D1 [shape=box, style=rounded, label="end"];}
-D4 [shape=note, label="cout<<\"hello\";"];
-D4 -> D1;
+D4 [shape=box, label="int n;"];
+D6 [shape=parallelogram, label="cin>>n;"];
+D4 -> D6;
+D6 -> D1;
 D0 -> D4;
 }
 
